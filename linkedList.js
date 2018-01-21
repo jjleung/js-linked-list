@@ -79,7 +79,7 @@ function linkedListGenerator(){
             prevNode.next = nextNode; 
         }
     }
-    
+
     let insert = function(value, number){
 
         if(!get(number) || number < 0){
@@ -112,10 +112,3 @@ function linkedListGenerator(){
 }
 
 var myLinkedList = linkedListGenerator();
-
-// console.log(myLinkedList.add("first"));
-// console.log(myLinkedList.add("second"));
-// console.log(myLinkedList.add("third"));
-// console.log(myLinkedList.get(2));
-// // console.log(myLinkedList.get(2));
-// // console.log(myLinkedList.get(2));
