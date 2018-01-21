@@ -54,29 +54,28 @@ function linkedListGenerator(){
     }
 
     let remove = function(number){
-        if(!get(number)){
+        if(!get(number)){ //removes edge: outside length
             return false;
         }
 
+        //adding pointers to nodes
         let prevNode = get(number-1);
         let curNode = get(number);
         let nextNode = get(number+1);
 
-        // console.log("prev: ", prevNode);
-        // console.log("cur: ", curNode);
-        // console.log("next: ", nextNode);
-        if(number === 0){
-            // console.log("index 0");
-            head = nextNode;
-            curNode = nextNode;
-        } else if(!curNode.next){
-            // console.log("no next node");
-            prevNode.next = null;
-            tail.next = prevNode;
+        //edge: remove the head
+        if(number === 0){ 
+
+            head = nextNode; //reassign 'head' to next
+
+        } else if(!nextNode){ //edge: remove the tail
+
+            prevNode.next = null; //remove the previous tail
+            tail.next = prevNode; // reassign 'tail' to new tail
             tail = prevNode;
+
         }else{
-            // console.log("removing middle node");
-            prevNode.next = nextNode; 
+            prevNode.next = nextNode; //pointer skips over removed node
         }
     }
 
