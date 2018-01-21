@@ -178,6 +178,7 @@ describe('Linked List Generator', function() {
     describe('takes an argument', function () {
       it('should find a node by it\'s index in the Linked List', function () {
         // urlList Tests
+        console.log(urlList.getHead());
         expect(urlList.get(0).value).to.equal('news.ycombinator.com');
         expect(urlList.get(1).value).to.equal('mozilla.org');
         expect(urlList.get(2).value).to.equal('eff.org');
